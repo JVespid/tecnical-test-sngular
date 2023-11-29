@@ -3,6 +3,9 @@
  * @returns {Number}
  */
 export function useCalc(num) {
+  if (num == 0) return 0;
+  if (num >= 1475) return -1;
+
   return 2 * Fibonacci(num) + 3 * Triangular(num) + 7 * Primo(num);
   // num = 1 => (2*(1))   + (3*(1))  + (7*(2)) = 19
   // num = 2 => (2*(1))   + (3*(3))  + (7*(2)) = 25
@@ -21,6 +24,7 @@ export function useCalc(num) {
  * @returns {Number}
  */
 export function Fibonacci(num) {
+  if (num == 0) return 0;
   let result = 0,
     last1 = 0,
     last2 = 1;
@@ -34,7 +38,7 @@ export function Fibonacci(num) {
   return result;
 }
 /**
- * @param {Number} num
+ * @param {Number} n
  * @returns {Number}
  */
 export function Triangular(n) {
@@ -46,6 +50,7 @@ export function Triangular(n) {
  * @returns {Number}
  */
 export function Primo(num) {
+  if (num == 0) return 0;
   if (num <= 2) return 2;
   for (let i = num; i > 2; i--) {
     if (esPrimo(i)) {

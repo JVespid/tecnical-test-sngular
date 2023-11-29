@@ -1,25 +1,29 @@
+import { useState } from "react";
+import Input from "./components/input";
+import Output from "./components/output";
+
 function App() {
+  const [input, setInput] = useState(0);
+
   return (
     <>
-
-      <header className="w-full flex bg-red-50">
-        <h1 className="bg-red-950 text-cyan-300">Prueba técnica de SNGULAR</h1>
+      <header className="w-full flex justify-around items-end pb-3 text-5xl mb-7">
+        <h1 className="">Prueba técnica de SNGULAR</h1>
         <p></p>
       </header>
 
-      <main>
-        <section className="app"></section>
-        <section className="document">
-          <article>
-            <h1>
-              archivo <code className="font-bold italic"> app.jsx</code>
-            </h1>
-            <p>
-              <code>
-                
-              </code>
-            </p>
-          </article>
+      <main className="w-full grid place-items-center row-span-3" style={{gridTemplateRows:"auto 1fr"}}>
+        <section className="app w-full h-auto mt-3 mb-6">
+          <div className="w-full grid grid-cols-7 grid-rows-2 gap-3 ">
+            <h2 className="col-start-3 col-span-3 pl-3 text-3xl flex justify-around">ingresa un numero valido <p></p></h2>
+            <Input
+              className="row-start-2 col-start-3 col-span-3 grid place-items-center"
+              setInput={setInput}
+            />
+          </div>
+        </section>
+        <section className="show ">
+          <Output value={input} />
         </section>
       </main>
     </>
