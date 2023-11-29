@@ -7,7 +7,7 @@ const inputsTest = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 describe("useCalc", () => {
   inputsTest.forEach((i, index) => {
     test(`numero ingresado => ${i}, numero esperado => ${resultsTest[index]}`, () => {
-      expect(useCalc(i)).toBe(resultsTest[i - 1]);
+      expect(useCalc(i)).toBe(resultsTest[index]);
     });
   });
 });

@@ -4,7 +4,9 @@
  */
 export function useCalc(num) {
   if (num == 0) return 0;
-  if (num >= 1475) return -1;
+  if (num <= -1 || num >= 1475) return -1;
+
+  console.log("object");
 
   return 2 * Fibonacci(num) + 3 * Triangular(num) + 7 * Primo(num);
   // num = 1 => (2*(1))   + (3*(1))  + (7*(2)) = 19
@@ -24,7 +26,7 @@ export function useCalc(num) {
  * @returns {Number}
  */
 export function Fibonacci(num) {
-  if (num == 0) return 0;
+  if (num == 0 || num >= 1475 || num <= -1) return 0;
   let result = 0,
     last1 = 0,
     last2 = 1;
@@ -42,6 +44,7 @@ export function Fibonacci(num) {
  * @returns {Number}
  */
 export function Triangular(n) {
+  if (n <= -1 || n >= 1475) return 0;
   return (n * (n + 1)) / 2;
 }
 
@@ -50,7 +53,7 @@ export function Triangular(n) {
  * @returns {Number}
  */
 export function Primo(num) {
-  if (num == 0) return 0;
+  if (num == 0 || num >= 1475 || num <= -1) return 0;
   if (num <= 2) return 2;
   for (let i = num; i > 2; i--) {
     if (esPrimo(i)) {

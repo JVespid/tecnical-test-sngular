@@ -17,12 +17,12 @@ function App() {
           <div className="w-full grid grid-cols-7 grid-rows-2 gap-3 ">
             <h2 className="col-start-3 col-span-3 pl-3 text-3xl flex justify-around">ingresa un numero valido <p></p></h2>
             <Input
-              className="row-start-2 col-start-3 col-span-3 grid place-items-center"
+              className="row-start-2 col-start-3 col-span-3 grid place-items-center m-4"
               setInput={setInput}
             />
           </div>
         </section>
-        <section className="show ">
+        <section className="show w-full h-full bg-slate-200 p-5 flex flex-col justify-start gap-10">
           <Output value={input} />
         </section>
       </main>

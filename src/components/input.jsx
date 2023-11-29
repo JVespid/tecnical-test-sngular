@@ -12,7 +12,7 @@ export default function Input({ setInput, className }) {
   const changeInput = (e) => {
     e.target.value= e.target.value.replace(" ", "-")
     if (!/^\d+$/.test(e.target.value) && e.target.value != "") {
-      setInput(0);
+      setInput(-1);
       setError(true);
       return;
     }
@@ -26,8 +26,9 @@ export default function Input({ setInput, className }) {
       <div className={className}>
         <input
           type="text"
+          placeholder="ingresa in numero menor a 1475"
           onChange={changeInput}
-          className={`border-black border-solid border-2 rounded text-green-700 p-1 text-center w-1/2`}
+          className={`border-black border-solid border-2 rounded text-green-700 p-1 text-center w-1/2 bg-slate-50`}
           style={
             error
               ? {
@@ -37,7 +38,7 @@ export default function Input({ setInput, className }) {
               : {}
           }
         />
-        {error && <p className="text-red-700">ingresa un valor valido</p>}
+        {error ? <p className="text-red-700">ingresa un valor valido</p>: <p className="text-red-700"></p> }
       </div>
     </>
   );
