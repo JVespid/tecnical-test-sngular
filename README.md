@@ -10,7 +10,7 @@ Hay 2 formas de usarlo:
 
 2. Por entorno Local, descargando el codigo y ejecutándolo, para esto se deben de seguir lo siguientes pasos:
 
-   - Asegurarse de tener Node.js instalado con la version o superior 20.9.0 [ (Link directo para instalarlo)](https://nodejs.org/es) o también visita su pagina oficial buscando en google "Node.js"
+   - Asegurarse de tener Node.js instalado con la version o superior 20.9.0 [ (Link directo para instalarlo)](https://nodejs.org/en) o también visita su pagina oficial buscando en google "Node.js"
    - Este proyecto esta hecho con el administrador de paquetes **_pnpm_**, asegúrate de tenerlo instalado, conoce mas visitando el sitio oficial de [pnpm](https://pnpm.io/es/installation)
    - Una vez hecho lo anterior se puede descargar el repositorio
    - Abriendo el directorio de la aplicación en la terminal usar el comando `pnpm install` para instalar todas las dependencias
